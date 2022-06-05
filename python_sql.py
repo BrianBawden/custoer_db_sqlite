@@ -25,8 +25,8 @@ def commit():
     print("Commiot")
     conn.commit()
 
-
+create_customer_table()
 show_table()
-# update_last_name(2, 'lenke')
-# show_table()
-# commit()
+add_customer(1, 'brian', 'bawden', '7734492935', '123 abc street')
+show_table()
+commit()
