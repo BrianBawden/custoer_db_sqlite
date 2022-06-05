@@ -1,5 +1,9 @@
 # Overview
 
+For this project I wanted to practice writing code that would allow me to work with a database through the use of functions. This would help reduce typing long repetative commands by only having to call a function with a few paramaters. 
+
+
+
 {Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
 {Provide a description the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
@@ -27,10 +31,11 @@
 {Make a list of websites that you found helpful in this project}
 * [Using SQL with Python](https://www.youtube.com/watch?v=xY54Emo8rQM)
 * [Udemy SQL Bootcamp](https://www.udemy.com/course/the-complete-sql-bootcamp/learn/lecture/19242668?start=1#content)
+* [Beginners Guide to SQLite](https://www.youtube.com/watch?v=5LpotBtmZZs)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+
+* Second table with appointment information which can join with customers to keep track of when each customer was seen last.
+* A function that allows for adding more columns to a table such as a timestamp.
+* A function to show the user specific data from mulitple tables.
