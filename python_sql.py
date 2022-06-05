@@ -26,7 +26,7 @@ def show_table():
         print(row)
 
 def commit():
-    print("Commiot")
+    print("Commit")
     conn.commit()
 
 def view_table_names():
