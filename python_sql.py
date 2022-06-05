@@ -7,8 +7,11 @@ conn = db.connect('sqlite.db')
 cur = conn.cursor()
 
 
-def create_customer_table():
-    cur.execute(f"CREATE TABLE IF NOT EXISTS customers (customer_id INTEGER PRIMARY KEY, first_name NVARCHAR(50), last_name NVARCHAR(50), p_number NVARCHAR(12), address NVARCHAR(50))")
+def create_table(table_name):
+    cur.execute(f"CREATE TABLE IF NOT EXISTS {table_name}")
+
+def alter_table(table_name, column_name, datatype):
+    cur.execute(f"ALTER TABLE {table_name} ADD {column_name} {datatype}")
 
 def add_customer(cu_id, first_name, last_name, phone_num, address):
     cur.execute(f"INSERT INTO customers(rowid, first_name, last_name, p_number, address) VALUES('{cu_id}', '{first_name}', '{last_name}', '{phone_num}', '{address}')")
@@ -25,8 +28,8 @@ def commit():
     print("Commiot")
     conn.commit()
 
-create_customer_table()
-show_table()
-add_customer(1, 'brian', 'bawden', '7734492935', '123 abc street')
-show_table()
-commit()
+def view_table_names():
+    data = pd.read_sql_query('SELECT name FROM sqlite_master WHERE type="table";', conn)
+    print(data.head())
+
+view_table_names()
