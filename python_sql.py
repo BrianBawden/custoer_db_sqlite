@@ -37,3 +37,4 @@ def view_column_name(table_name):
     column_name = cur.execute(f"PRAGMA table_info({table_name});")
     column_name = cur.fetchall()
     print(column_name)
+
