@@ -28,7 +28,6 @@ For this project I wanted to practice writing code that would allow me to work w
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Using SQL with Python](https://www.youtube.com/watch?v=xY54Emo8rQM)
 * [Udemy SQL Bootcamp](https://www.udemy.com/course/the-complete-sql-bootcamp/learn/lecture/19242668?start=1#content)
 * [Beginners Guide to SQLite](https://www.youtube.com/watch?v=5LpotBtmZZs)
