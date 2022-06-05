@@ -17,8 +17,8 @@ def alter_table(table_name, column_name, datatype):
 def add_customer(cu_id, first_name, last_name, phone_num, address):
     cur.execute(f"INSERT INTO customers(rowid, first_name, last_name, p_number, address) VALUES('{cu_id}', '{first_name}', '{last_name}', '{phone_num}', '{address}')")
 
-def update_last_name(cu_id, new_name):
-    cur.execute(f"UPDATE customers SET last_name = '{new_name}' WHERE customer_id = {cu_id}")
+def update_customer(cu_id, column_name, new_info):
+    cur.execute(f"UPDATE customers SET {column_name} = '{new_info}' WHERE customer_id = {cu_id}")
 
 def show_table():
     cur.execute("SELECT * FROM customers")
@@ -37,3 +37,4 @@ def view_column_name(table_name):
     column_name = cur.execute(f"PRAGMA table_info({table_name});")
     column_name = cur.fetchall()
     print(column_name)
+
