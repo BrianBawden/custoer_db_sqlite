@@ -1,4 +1,4 @@
-# Youtube websie used: https://www.youtube.com/watch?v=xY54Emo8rQM
+# Youtube website used: https://www.youtube.com/watch?v=xY54Emo8rQM
 
 from turtle import onclick
 import pandas as pd
