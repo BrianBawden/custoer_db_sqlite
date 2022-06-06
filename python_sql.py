@@ -70,15 +70,34 @@ def show_table():
     for row in cur.fetchall():
         print(row)
 
+
 def commit():
+
+    """
+    commits/saves the functions run. If this function is not run the information entered will not be saved.
+    """
     print("Commit")
     conn.commit()
 
+
 def view_table_names():
+
+    """
+    This will print the names of the tables saved to the database.
+    """
+    
     data = pd.read_sql_query('SELECT name FROM sqlite_master WHERE type="table";', conn)
     print(data.head())
 
+
 def view_column_name(table_name):
+
+    """
+    table_name = str
+    
+    This will print out the names of the columns in the table passed to the function. 
+    """
+
     cur.execute(f"PRAGMA table_info({table_name});")
     for col in  cur.fetchall():
         print(col)
