@@ -102,7 +102,4 @@ def view_column_name(table_name):
     for col in  cur.fetchall():
         print(col)
 
-# add_customer(2, 'kate', 'bawden', '8384859966', '1234 abc street')
-# create_table()
-# commit()
 view_column_name('customers')
