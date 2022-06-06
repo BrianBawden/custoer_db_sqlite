@@ -7,9 +7,7 @@ I started by writing a function called 'create_table' with the table name as a p
 In order to view information from the database I wrote functions: 'show_table', 'commit', 'view_table_names', and 'view_column_name.' The commit function is more to save the changes to the database as needed. If the commit function is not run the changes are not saved to the database. 
 
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walk through of the code, and a view of how created the Relational Database.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video]([http://youtube.link.goes.here](https://youtu.be/1qaWrK4KWpc))
 
 # Relational Database
 
