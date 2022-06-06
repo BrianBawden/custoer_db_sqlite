@@ -1,30 +1,35 @@
 # Overview
 
-For this project I wanted to practice writing code that would allow me to work with a database through the use of functions. This would help reduce typing long repetative commands by only having to call a function with a few paramaters. 
+For this project I wanted to practice writing code that would allow me to work with a database through the use of functions. This would help reduce typing long repetitive commands by only having to call a function with a few parameters.
+
+I started by writing a function called 'create_table' with the table name as a parameter. This function will create the table. Then to add columns to the table I wrote the 'alter_table' function to add columns. The table I am using is a customer database so I plan to add  customer information to the table with the 'add_customer' function. To demonstrate the ability to edit information in the table I wrote the 'update_customer' function which takes three arguments. 
+
+In order to view information from the database I wrote functions: 'show_table', 'commit', 'view_table_names', and 'view_column_name.' The commit function is more to save the changes to the database as needed. If the commit function is not run the changes are not saved to the database. 
 
 
-
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
-{Provide a description the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
+{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walk through of the code, and a view of how created the Relational Database.}
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Relational Database
 
-{Describe the relational database you are using.}
+For this database I created a table called 'customers' which has six columns: 
 
-{Describe the structure (tables) of the relational database that you created.}
+* customer_id, INTEGER
+* first_name, NVARCHAR(50)
+* last_name, NVARCHAR(50)
+* p_number, NVARCHAR(50)
+* address, NVARCHAR(50)
+* date, TEXT
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+The tools I used to develop my program were:
 
-{Describe the programming language that you used and any libraries.}
+* VScode
+* Python 3.10.4
+* sqlite3
+* pandas
 
 # Useful Websites
 
@@ -36,5 +41,5 @@ For this project I wanted to practice writing code that would allow me to work w
 
 
 * Second table with appointment information which can join with customers to keep track of when each customer was seen last.
-* A function that allows for adding more columns to a table such as a timestamp.
-* A function to show the user specific data from mulitple tables.
+* A function to show the user specific data from multiple tables.
+* Change the customer_id and date data to automatically generate when a new row is created. 
