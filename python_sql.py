@@ -1,4 +1,3 @@
-# Youtube website used: https://www.youtube.com/watch?v=xY54Emo8rQM
 
 import pandas as pd
 import sqlite3 as db
