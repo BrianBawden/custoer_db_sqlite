@@ -1,6 +1,5 @@
 # Youtube website used: https://www.youtube.com/watch?v=xY54Emo8rQM
 
-from turtle import onclick
 import pandas as pd
 import sqlite3 as db
 
@@ -34,7 +33,6 @@ def view_table_names():
     print(data.head())
 
 def view_column_name(table_name):
-    column_name = cur.execute(f"PRAGMA table_info({table_name});")
-    column_name = cur.fetchall()
-    print(column_name)
-
+    cur.execute(f"PRAGMA table_info({table_name});")
+    for col in  cur.fetchall():
+        print(col)
