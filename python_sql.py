@@ -1,14 +1,21 @@
-
+# Import pandas and sqlite3 to help interact with the database
 import pandas as pd
 import sqlite3 as db
 
+# Set the variable 'conn' to the sqlite database with db
 conn = db.connect('sqlite.db')
+# Set the variable 'cur' to use as the cursor which will allow me to execute SQL commands in Python.
 cur = conn.cursor()
 
-
+# This function will create a new table based on the name passed to the function when it is called. 
 def create_table(table_name):
     cur.execute(f"CREATE TABLE IF NOT EXISTS {table_name}")
 
+"""The alter_table function is how new columns are added to a table and takes three parameters: 
+    * The name of the table working with
+    * The new column name
+    * datatype of the new column
+"""
 def alter_table(table_name, column_name, datatype):
     cur.execute(f"ALTER TABLE {table_name} ADD {column_name} {datatype}")
 
