@@ -8,7 +8,7 @@ conn = db.connect('sqlite.db')
 cur = conn.cursor()
 
 
-def create_table(table_name):
+def create_table():
 
     """ 
     table_name = str
@@ -16,7 +16,7 @@ def create_table(table_name):
     This function will create a new table based on the name passed to the function when it is called.
     """
 
-    cur.execute(f"CREATE TABLE IF NOT EXISTS {table_name}")
+    cur.execute(f"CREATE TABLE IF NOT EXISTS customers(cu_id INTEGER PRIMARY KEY)")
 
 
 def alter_table(table_name, column_name, datatype):
@@ -101,3 +101,8 @@ def view_column_name(table_name):
     cur.execute(f"PRAGMA table_info({table_name});")
     for col in  cur.fetchall():
         print(col)
+
+# add_customer(2, 'kate', 'bawden', '8384859966', '1234 abc street')
+# create_table()
+# commit()
+view_column_name('customers')
